@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class UsersViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     var userData : [UserModel] = []
     
@@ -25,9 +25,13 @@ class UsersViewController: UIViewController {
         fetchUsersData()
     }
     
+    
+    
+}
+extension UsersViewController: UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
     func fetchUsersData() {
         DispatchQueue.main.async {
-            Alamofire.request("https://raw.githubusercontent.com/arimunandar/API/master/users.json").responseJSON(completionHandler: { (response) in
+            Alamofire.request("https://raw.githubusercontent.com/arimunandar/API/master/users.json").validate().responseJSON(completionHandler: { (response) in
                 switch response.result {
                 case .success(let value):
                     let json = JSON(value)
@@ -43,10 +47,6 @@ class UsersViewController: UIViewController {
             })
         }
     }
-
-}
-extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.userData.count
     }
@@ -58,5 +58,26 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailVC = DetailViewController.instance
+        if let indexPath = tableView.indexPathForSelectedRow {
+            detailVC.nameData = self.userData[indexPath.row].name
+        }
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }

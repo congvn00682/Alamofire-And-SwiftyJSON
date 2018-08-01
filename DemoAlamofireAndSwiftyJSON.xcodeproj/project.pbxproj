@@ -18,6 +18,7 @@
 		870FEA5221101AC400330016 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 870FEA5021101AC400330016 /* UsersTableViewCell.xib */; };
 		870FEA5821101FC500330016 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870FEA5721101FC500330016 /* UserModel.swift */; };
 		870FEA5A21101FDC00330016 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870FEA5921101FDC00330016 /* UserAPI.swift */; };
+		873BB9462111652400662670 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BB9452111652400662670 /* DetailViewController.swift */; };
 		B65B2A13DFF1EC23246C4DFD /* Pods_DemoAlamofireAndSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841CB70AE0D826B277CD6949 /* Pods_DemoAlamofireAndSwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		870FEA5021101AC400330016 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
 		870FEA5721101FC500330016 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		870FEA5921101FDC00330016 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		873BB9452111652400662670 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D10138F5419F4E147D6C0E99 /* Pods-DemoAlamofireAndSwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoAlamofireAndSwiftyJSON.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoAlamofireAndSwiftyJSON/Pods-DemoAlamofireAndSwiftyJSON.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,11 +87,12 @@
 				870FEA5521101F9700330016 /* classes */,
 				870FEA4921101A1500330016 /* Users */,
 				870FEA3721101A0B00330016 /* AppDelegate.swift */,
-				870FEA3921101A0B00330016 /* ViewController.swift */,
+				873BB9452111652400662670 /* DetailViewController.swift */,
 				870FEA3B21101A0B00330016 /* Main.storyboard */,
 				870FEA3E21101A0C00330016 /* Assets.xcassets */,
 				870FEA4021101A0C00330016 /* LaunchScreen.storyboard */,
 				870FEA4321101A0C00330016 /* Info.plist */,
+				870FEA3921101A0B00330016 /* ViewController.swift */,
 			);
 			path = DemoAlamofireAndSwiftyJSON;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				870FEA5821101FC500330016 /* UserModel.swift in Sources */,
 				870FEA4C21101A3000330016 /* UsersViewController.swift in Sources */,
 				870FEA3821101A0B00330016 /* AppDelegate.swift in Sources */,
+				873BB9462111652400662670 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
